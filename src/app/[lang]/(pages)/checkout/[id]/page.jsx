@@ -112,7 +112,7 @@ const CheckoutPage = () => {
       try {
         const response = await axios.post(
           // "http://localhost:5000/create-payment-intent",
-          "https://kiff-new-backend.vercel.app/create-payment-intent",
+          "https://backend-two-nu-85.vercel.app/create-payment-intent",
           { amount: totalPrice * 100 }
         );
         setClientSecret(response.data.clientSecret);
