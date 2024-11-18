@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f3f4f5;
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+
+@layer base {
+  :root {
+    --color-primary: 167, 27, 74; /* #A71B4A*/
+    --color-secondary: 74, 76, 90; /* #4a4c5a*/
+
+    --color-bg: 243, 244, 245; /* #f3f4f5*/
+    --color-bg-side: 252, 251, 255; /* #fcfdff*/
+    --color-bg-black: 0, 0, 0;
+    --digital-category-bgc: #ade8f4;
+    --fashion-category-bgc: #ffddd2;
+    --beauty-category-bgc: #ddd92a;
+    --sport-category-bgc: #ffd60a;
+    --house-category-bgc: #ccd5ae;
+    --toy-category-bgc: #cce3de;
+    --stationery-category-bgc: #fbb13c;
+    /* --font-family: iranyekan, "IRANSans", "Tahoma"; */
+  }
+}
+
+/* scrollbar */
+/* Custom scrollbar styles for Webkit browsers (Chrome, Safari) */
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e3944;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #2e3944 #f3f4f5;
+} */
+
+/* scrollbar */
+
+.single-line-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Loadder */
+@keyframes loader_5191 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/woff/iranyekanwebbold.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebbold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/woff/iranyekanwebthin.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebthin.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/woff/iranyekanweblight.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanweblight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/woff/iranyekanwebregular.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("/fonts/ttf/iranyekanwebregular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/woff/iranyekanwebmedium.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebmedium.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/woff/iranyekanwebextrabold.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("/fonts/ttf/iranyekanwebextrabold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 850;
+  src: url("/fonts/woff/iranyekanwebblack.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/ttf/iranyekanwebblack.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/woff/iranyekanwebextrablack.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("/fonts/ttf/iranyekanwebextrablack.ttf") format("truetype");
+  font-display: swap;
+}
+
+.square {
+  background: #2e3944;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+#sq1 {
+  margin-top: -25px;
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 0s infinite alternate;
+}
+
+#sq2 {
+  margin-top: -25px;
+  animation: loader_5191 675ms ease-in-out 75ms infinite alternate;
+}
+
+#sq3 {
+  margin-top: -25px;
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 150ms infinite;
+}
+
+#sq4 {
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 225ms infinite;
+}
+
+#sq5 {
+  animation: loader_5191 675ms ease-in-out 300ms infinite;
+}
+
+#sq6 {
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 375ms infinite;
+}
+
+#sq7 {
+  margin-top: 15px;
+  margin-left: -25px;
+  animation: loader_5191 675ms ease-in-out 450ms infinite;
+}
+
+#sq8 {
+  margin-top: 15px;
+  animation: loader_5191 675ms ease-in-out 525ms infinite;
+}
+
+#sq9 {
+  margin-top: 15px;
+  margin-left: 15px;
+  animation: loader_5191 675ms ease-in-out 600ms infinite;
+}
+/* Loadder */
+
+.react-viewer-list > li {
+  width: auto !important;
+}
+.react-viewer-list > li > img {
+  margin-left: 0 !important;
+}
