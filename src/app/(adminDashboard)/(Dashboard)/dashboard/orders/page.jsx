@@ -232,7 +232,7 @@ export default function Contact() {
                           {each.paymentMethod}
                         </TableCell>
                         <TableCell className="text-zinc-600 tracking-wide font-medium single-line-text">
-                          {each.totalPrice} MAD
+                          {each.totalPrice} DH
                         </TableCell>
                         <TableCell className="text-zinc-600 tracking-wide font-medium single-line-text">
                           {each.status}

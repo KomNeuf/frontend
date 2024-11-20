@@ -67,7 +67,7 @@ const SenditTracking = ({ lang }) => {
             <strong>{t.trackingInfo.address}:</strong> {trackingInfo.address}
           </p>
           <p>
-            <strong>{t.trackingInfo.amount}:</strong> {trackingInfo.amount} MAD
+            <strong>{t.trackingInfo.amount}:</strong> {trackingInfo.amount} DH
           </p>
           <p>
             <strong>{t.trackingInfo.comment}:</strong>{" "}

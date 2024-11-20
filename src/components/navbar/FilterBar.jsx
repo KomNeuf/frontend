@@ -16,7 +16,7 @@ export default function FilterBar({ onFilterChange, products, lang }) {
     Condition: [...new Set(products?.map((product) => product.condition))],
     // Color: [...new Set(products?.map((product) => product.color))],
     // Material: [...new Set(products?.map((product) => product.materials))],
-    Price: ["Under MAD100", "MAD100 - MAD200", "Over MAD200"],
+    Price: ["Under DH100", "DH100 - DH200", "Over DH200"],
     Sort: ["Low to High : Price", "High to Low : Price"],
   };
 

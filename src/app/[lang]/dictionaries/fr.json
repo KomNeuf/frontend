@@ -408,7 +408,7 @@
         "following": "Suivant",
         "profile": "Profil",
         "lastSeen": "Vu pour la dernière fois",
-        "shippingOffer": " Pour une durée limitée seulement, nous offrons la LIVRAISON GRATUITE pour les commandes supérieures à 100 MAD !"
+        "shippingOffer": " Pour une durée limitée seulement, nous offrons la LIVRAISON GRATUITE pour les commandes supérieures à 100 DH!"
     },
     "memberItems": {
         "member": " Articles des membres"
@@ -454,7 +454,7 @@
         "ribNo": "R.I.B (24 chiffres)",
         "bankRequired": "Le nom de la banque est requis",
         "ribRequired": "Le R.I.B doit comporter 24 chiffres",
-        "offerLable": "Pour une durée limitée seulement, nous offrons la LIVRAISON GRATUITE pour les commandes supérieures à 100 MAD !",
+        "offerLable": "Pour une durée limitée seulement, nous offrons la LIVRAISON GRATUITE pour les commandes supérieures à 100 DH!",
         "comingOffer": " À venir",
         "conditionLabel": "Condition",
         "new": "Nouveau",
@@ -581,7 +581,7 @@
         "ribNo": "R.I.B (24 chiffres)",
         "bankRequired": "Le nom de la banque est requis",
         "ribRequired": "Le R.I.B doit comporter 24 chiffres",
-        "offerLable": "Pour une durée limitée seulement, nous offrons la LIVRAISON GRATUITE pour les commandes supérieures à 100 MAD !",
+        "offerLable": "Pour une durée limitée seulement, nous offrons la LIVRAISON GRATUITE pour les commandes supérieures à 100 DH!",
         "comingOffer": " À venir",
         "sizeLabel": "Taille",
         "selectBrand": "Sélectionnez une marque",
@@ -761,9 +761,9 @@
         "Price": "Prix",
         "Brand": "Marque",
         "Sort": "Trier",
-        "under50": "Moins de 100MAD",
-        "between50And100": "100MAD - 200MAD",
-        "over100": "Plus de 200MAD",
+        "under50": "Moins de 100DH",
+        "between50And100": "100DH - 200DH",
+        "over100": "Plus de 200DH",
         "lowToHigh": "Bas à Haut : Prix",
         "highToLow": "Haut à bas : Prix",
         "clearFilters": "Effacer les filtres",
@@ -988,7 +988,7 @@
         "title": "✨ Offre exclusive ✨",
         "freeShipping": "Pour une durée limitée seulement, nous offrons",
         "boldText": "LIVRAISON GRATUITE",
-        "conditions": "pour les commandes supérieures à 100 MAD !",
+        "conditions": "pour les commandes supérieures à 100 DH!",
         "exclusiveDeal": "Ne manquez pas cette offre exclusive pour acheter vos articles préférés sans frais supplémentaires. Dépêchez-vous, cette offre ne durera pas longtemps !",
         "shopNow": "Achetez maintenant",
         "close": "Fermer"

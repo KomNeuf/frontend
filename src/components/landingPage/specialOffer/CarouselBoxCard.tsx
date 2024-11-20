@@ -29,7 +29,7 @@ const CarouselBoxCard = ({ product, lang }) => {
             </div>
 
             <p className="text-xl text-primaryText font-bold">
-              {product?.price} <sup>MAD</sup>
+              {product?.price} <sup>DH</sup>
             </p>
           </div>
         </Link>

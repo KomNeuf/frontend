@@ -112,7 +112,7 @@ const CheckoutPage = () => {
       try {
         const response = await axios.post(
           // "http://localhost:5000/create-payment-intent",
-          "https://backend-two-nu-85.vercel.app/create-payment-intent",
+          "https://kiff-new-backend.vercel.app/create-payment-intent",
           { amount: totalPrice * 100 }
         );
         setClientSecret(response.data.clientSecret);
@@ -195,7 +195,7 @@ const CheckoutPage = () => {
               </div>
               <div className="ml-auto text-lg">
                 <span className="mt-3 -ml-1">
-                  {product.price?.toFixed(2)} MAD
+                  {product.price?.toFixed(2)} DH
                 </span>
               </div>
             </div>
@@ -378,7 +378,7 @@ const CheckoutPage = () => {
             <p>
               <span className="font-medium">{t?.shippingCost}: </span>
               {/* {product?.shippingCost?.toFixed(2) || 0} */}
-              {shippingCost || 0} MAD
+              {shippingCost || 0} DH
             </p>
             <p className="text-sm text-gray-500">{t?.homeDelivery}</p>
           </div>
@@ -405,12 +405,12 @@ const CheckoutPage = () => {
             </h2>
             <div className="flex justify-between mb-2">
               <span>{t?.order}</span>
-              <span>{product.price.toFixed(2)} MAD</span>
+              <span>{product.price.toFixed(2)} DH</span>
             </div>
             <div className="flex justify-between mb-2">
               <span>{t?.shipping}</span>
-              {/* <span>{product?.shippingCost?.toFixed(2) || 0} MAD</span> */}
-              <span>{shippingCost || 0} MAD</span>
+              {/* <span>{product?.shippingCost?.toFixed(2) || 0} DH</span> */}
+              <span>{shippingCost || 0} DH</span>
             </div>
             <div className="flex justify-between mb-2">
               <span>{t?.salesTax}</span>
@@ -419,13 +419,13 @@ const CheckoutPage = () => {
             <hr className="my-2" />
             <div className="flex justify-between font-bold text-lg text-primaryText">
               <span>{t?.totalToPay}</span>
-              <span>{totalPrice} MAD</span>
+              <span>{totalPrice} DH</span>
             </div>
             <button
               onClick={handleCheckout}
               className="mt-4 w-full bg-primaryText text-white py-2 rounded-md hover:bg-primaryText/80 transition duration-300"
             >
-              {t?.placeOrder} {totalPrice} MAD
+              {t?.placeOrder} {totalPrice} DH
             </button>
           </div>
         )}
@@ -501,18 +501,18 @@ const CheckoutForm = ({
           </h2>
           <div className="flex justify-between mb-2">
             <span>{t?.order}</span>
-            <span>{product.price.toFixed(2)} MAD</span>
+            <span>{product.price.toFixed(2)} DH</span>
           </div>
           <div className="flex justify-between mb-2">
             <span>{t?.shipping}</span>
-            {/* <span>{product?.shippingCost?.toFixed(2) || 0} MAD</span> */}
-            <span>{shippingCost || 0} MAD</span>
+            {/* <span>{product?.shippingCost?.toFixed(2) || 0} DH</span> */}
+            <span>{shippingCost || 0} DH</span>
           </div>
 
           <hr className="my-2" />
           <div className="flex justify-between font-bold text-lg text-primaryText">
             <span>{t?.totalToPay}</span>
-            <span>{amount} MAD</span>
+            <span>{amount} DH</span>
           </div>
         </div>
         <PaymentElement />
@@ -521,7 +521,7 @@ const CheckoutForm = ({
           disabled={!stripe || isOrderLoading}
           className="mt-4 w-full bg-primaryText text-white py-2 rounded-md hover:bg-primaryText/80 transition duration-300"
         >
-          {isOrderLoading ? t?.processing : `${t?.pay}  ${amount} MAD`}
+          {isOrderLoading ? t?.processing : `${t?.pay}  ${amount} DH`}
         </button>
         <p className="mt-2 text-center text-sm text-gray-500">
           {t?.paymentSecurity}

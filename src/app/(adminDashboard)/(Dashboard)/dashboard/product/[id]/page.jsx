@@ -108,7 +108,7 @@ const ProductDetail = () => {
         </p>
         <p className="text-lg text-gray-600">
           <span className="font-medium text-gray-700">Price:</span>
-          {product?.price} MAD
+          {product?.price} DH
         </p>
       </div>
     </div>

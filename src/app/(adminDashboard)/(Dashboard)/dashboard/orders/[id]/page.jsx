@@ -123,7 +123,7 @@ const OrderDetail = () => {
                 <p>
                   Total Price:{" "}
                   <span className="text-md font-bold text-gray-800">
-                    {order?.totalPrice} MAD
+                    {order?.totalPrice} DH
                   </span>
                 </p>
               </div>
@@ -288,7 +288,7 @@ const OrderDetail = () => {
               <p>Name: {order?.senditDelivery?.name}</p>
               <p>Phone: {order?.senditDelivery?.phone}</p>
               <p>Status: {order?.senditDelivery?.status}</p>
-              <p>Delivery Fee: {order?.senditDelivery?.fee} MAD</p>
+              <p>Delivery Fee: {order?.senditDelivery?.fee} DH</p>
               <p>Delivery Code: {order?.senditDelivery?.code}</p>
             </div>
             <div className="mt-2 text-gray-700">

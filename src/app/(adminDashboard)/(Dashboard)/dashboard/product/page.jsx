@@ -329,7 +329,7 @@ export default function Product() {
                           {each.materials}
                         </TableCell>
                         <TableCell className="text-zinc-600 tracking-wide font-medium single-line-text">
-                          {each.price} MAD
+                          {each.price} DH
                         </TableCell>
                         <TableCell className="text-zinc-600 tracking-wide font-medium single-line-text">
                           {each.bankName}

@@ -149,7 +149,7 @@ const DetailPage = () => {
             <div className="p-4">
               <div className="flex justify-between items-center mb-4">
                 <p className="text-2xl text-primaryText font-bold">
-                  {product?.price} MAD
+                  {product?.price} DH
                 </p>
 
                 {product?.status === "Sold Out" && (

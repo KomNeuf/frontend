@@ -197,7 +197,7 @@ const OrderTab = ({ type, orders, refetch }) => {
 
                 <div>
                   <p className=" font-medium text-gray-800">
-                    {t?.totalPrice}: {order?.totalPrice} MAD
+                    {t?.totalPrice}: {order?.totalPrice} DH
                   </p>
                 </div>
               </div>

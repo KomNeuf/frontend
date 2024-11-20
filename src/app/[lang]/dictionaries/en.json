@@ -406,7 +406,7 @@
     "following": "Following",
     "profile": "Profile",
     "lastSeen": "Last seen",
-    "shippingOffer": " For a limited time only, we‘re offering FREE SHIPPING on orders over 100 MAD!"
+    "shippingOffer": " For a limited time only, we‘re offering FREE SHIPPING on orders over 100 DH!"
   },
   "memberItems": {
     "member": " Member's items"
@@ -445,7 +445,7 @@
     "bankRequired": "Bank name is required",
     "quantityLabel": "Quantity",
     "ribRequired": "R.I.B must be 24 digits",
-    "offerLable": "For a limited time only, we're offering FREE SHIPPING on orders over 100 MAD!",
+    "offerLable": "For a limited time only, we're offering FREE SHIPPING on orders over 100 DH!",
     "comingOffer": " Coming Soon",
     "satisfactory": "Satisfactory",
     "subcategoryError": "Subcategory is required",
@@ -579,7 +579,7 @@
     "ribNo": "R.I.B (24 digits)",
     "bankRequired": "Bank name is required",
     "ribRequired": "R.I.B must be 24 digits",
-    "offerLable": "For a limited time only, we're offering FREE SHIPPING on orders over 100 MAD!",
+    "offerLable": "For a limited time only, we're offering FREE SHIPPING on orders over 100 DH!",
     "comingOffer": " Coming Soon",
     "satisfactory": "Satisfactory",
     "colorLabel": "Color",
@@ -758,9 +758,9 @@
     "Price": "Price",
     "Sort": "Sort",
     "Brand": "Brand",
-    "under50": "Under MAD100",
-    "between50And100": "MAD100 - MAD200",
-    "over100": "Over MAD200",
+    "under50": "Under DH100",
+    "between50And100": "DH100 - DH200",
+    "over100": "Over DH200",
     "lowToHigh": "Low to High : Price",
     "highToLow": "High to Low : Price",
     "clearFilters": "Clear filters",
@@ -985,7 +985,7 @@
     "title": "✨ Exclusive Offer ✨",
     "freeShipping": "For a limited time only, we’re offering",
     "boldText": "FREE SHIPPING",
-    "conditions": "on orders over 100 MAD!",
+    "conditions": "on orders over 100 DH!",
     "exclusiveDeal": "Don’t miss out on this exclusive deal to shop your favorites without the extra cost. Hurry, this offer won’t last long!",
     "shopNow": "Shop Now",
     "close": "Close"

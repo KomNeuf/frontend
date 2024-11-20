@@ -184,7 +184,7 @@ export default function DashboardOverview() {
     labels: monthlyRevenue.map((data) => data.month),
     datasets: [
       {
-        label: "Monthly Revenue (MAD)",
+        label: "Monthly Revenue (DH)",
         data: monthlyRevenue.map((data) => data.amount),
         borderColor: "#36A2EB",
         backgroundColor: "rgba(54, 162, 235, 0.5)",
@@ -203,7 +203,7 @@ export default function DashboardOverview() {
       },
       tooltip: {
         callbacks: {
-          label: (context) => ` ${context.raw.toLocaleString()} MAD`,
+          label: (context) => ` ${context.raw.toLocaleString()} DH`,
         },
       },
     },
@@ -212,7 +212,7 @@ export default function DashboardOverview() {
         beginAtZero: true,
         ticks: {
           stepSize: 10000,
-          callback: (value) => ` ${value.toLocaleString()} MAD`,
+          callback: (value) => ` ${value.toLocaleString()} DH`,
         },
       },
     },
@@ -435,7 +435,7 @@ export default function DashboardOverview() {
               Monthly Revenue Trend
             </h2>{" "}
             <h2 className="text-xl font-semibold text-gray-800">
-              Total Revenue: {totalRevenue.toLocaleString()} MAD
+              Total Revenue: {totalRevenue.toLocaleString()} DH
             </h2>
           </div>
           <Line

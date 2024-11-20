@@ -134,7 +134,7 @@ const Footer = ({ lang }) => {
 
           <div className="flex space-x-10 justify-center items-center mb-12">
             <Link
-              href="https://www.tiktok.com/@kiffnew?is_from_webapp=1&sender_device=pc"
+              href="https://www.tiktok.com/@komneufmode?_t=8rWBbNkTscz&_r=1"
               target="_blank"
               className="block  text-gray-900 transition-all duration-500 hover:text-primaryText "
             >
@@ -168,7 +168,7 @@ const Footer = ({ lang }) => {
               </svg>
             </Link>
             <Link
-              href="https://www.instagram.com/ckomneuf?igsh=MXE4bDR5dHZkdTIxdQ=="
+              href="https://www.instagram.com/komneufmode?igsh=MXE4bDR5dHZkdTIxdQ=="
               target="_blank"
               className="block  text-gray-900 transition-all duration-500 hover:text-primaryText "
             >

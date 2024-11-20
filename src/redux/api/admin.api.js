@@ -5,8 +5,8 @@ const getUserToken = () => {
   return userToken ? JSON.parse(userToken).token : "";
 };
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:5000/api/v1/",
-  // baseUrl: "https://kiff-new-backend.vercel.app/api/v1/",
+  // baseUrl: "http://localhost:5000/api/v1/",
+  baseUrl: "https://kiff-new-backend.vercel.app/api/v1/",
   headers: {
     Authorization:
       typeof window !== "undefined" ? `Bearer ${getUserToken()}` : "",

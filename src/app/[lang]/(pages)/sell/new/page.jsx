@@ -485,7 +485,7 @@ const SellPage = () => {
             </label>
             <div className="relative">
               <span className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
-                MAD
+              DH
               </span>
               <input
                 type="number"
@@ -556,7 +556,7 @@ const SellPage = () => {
               <p className="font-bold">Limited Time Offer!</p>
               <p>
                 For a limited time only, we&apos;re offering FREE SHIPPING on
-                orders over 100 MAD!
+                orders over 100 DH!
               </p>
             </div>
           </div> */}

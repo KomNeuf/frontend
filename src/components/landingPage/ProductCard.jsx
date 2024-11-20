@@ -206,7 +206,7 @@ const ProductCard = ({ product, type, refetch, lang }) => {
           </div>
 
           <p className="text-xl text-primaryText font-bold">
-            {product?.price} <sup>MAD</sup>
+            {product?.price} <sup>DH</sup>
           </p>
         </div>
       </Link>
