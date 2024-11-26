@@ -190,7 +190,7 @@ const ProductCard = ({ product, type, refetch, lang }) => {
               {product.adminComment}
             </p>
           )}
-          <h2 className="capitalize text-lg font-semibold text-primaryText hover:underline leading-4">
+          <h2 className="text-nowrap capitalize text-lg font-semibold text-primaryText hover:underline leading-4">
             {product?.title?.length > 20
               ? `${product.title.substring(0, 20)}...`
               : product?.title}

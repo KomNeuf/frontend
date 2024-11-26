@@ -26,11 +26,11 @@ const CategoriesNav = ({ lang, toggleSidebar }) => {
     if (
       subcategory == "Men" ||
       subcategory == "Women" ||
-      subcategory == "Wholesale" ||
+      subcategory == "Traditional Wear" ||
       subcategory == "Kids"
     ) {
       router.push(
-        `/${lang}/searchResult?query=${encodeURIComponent(subcategory)}`
+        `/${lang}/searchResult?seeAll=${encodeURIComponent(subcategory)}`
       );
     } else {
       event.stopPropagation();
@@ -78,7 +78,7 @@ const CategoriesNav = ({ lang, toggleSidebar }) => {
                   <ul>
                     {(category?.name === "Women" ||
                       category?.name === "Men" ||
-                      // category?.name === "Traditional Wear" ||
+                      category?.name === "Traditional Wear" ||
                       category?.name === "Kids") && (
                       <li className="flex items-center mb-2">
                         <p
@@ -176,6 +176,7 @@ const CategoriesNav = ({ lang, toggleSidebar }) => {
                   <ul className="space-y-1">
                     {(category?.name === "Women" ||
                       category?.name === "Men" ||
+                      category?.name === "Traditional Wear" ||
                       category?.name === "Kids") && (
                       <li className="flex items-center ">
                         <p
@@ -220,7 +221,7 @@ const CategoriesNav = ({ lang, toggleSidebar }) => {
                                 </Link>
                               </li>
                             ))}
-                          </ul> 
+                          </ul>
                         )}
                       </li>
                     ))}

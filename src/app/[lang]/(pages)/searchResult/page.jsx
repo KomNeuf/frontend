@@ -17,7 +17,7 @@ const SearchResult = ({ params }) => {
   const subcategory = searchParams.get("subcategory");
   const specificItem = decodeURIComponent(searchParams.get("specificItem"));
   const [activeFilters, setActiveFilters] = useState([]);
-
+  const seeAll = searchParams.get("seeAll");
   const queryFilters = activeFilters.reduce((acc, filter) => {
     const [key, value] = filter.split(": ");
     acc[key.toLowerCase().replace(/\s+/g, "")] = value;
@@ -28,7 +28,9 @@ const SearchResult = ({ params }) => {
     isLoading,
     error,
   } = api.adminApis.useGetFilteredProductsQuery(
-    searchQuery && searchQuery !== "null"
+    seeAll
+      ? { ...queryFilters, seeAll }
+      : searchQuery && searchQuery !== "null"
       ? { ...queryFilters, searchQuery }
       : { ...queryFilters, category, subcategory, specificItem }
   );

@@ -73,7 +73,7 @@ const SearchBar = ({ lang }) => {
       {showDropdown && (
         <div
           ref={dropdownRef}
-          className="absolute z-40 mt-1 w-full bg-primaryGray  rounded-md shadow-lg"
+          className="absolute z-40 mt-1 w-full bg-primaryGray  rounded-md shadow-lg max-h-[400px] overflow-y-scroll"
         >
           {isLoading ? (
             <Loading />

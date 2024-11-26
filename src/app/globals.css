@@ -28,26 +28,24 @@ body {
 
 /* scrollbar */
 /* Custom scrollbar styles for Webkit browsers (Chrome, Safari) */
-/* ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f3f4f5;
+::-webkit-scrollbar {
+  width: 10px; /* Vertical scrollbar width */
+  height: 12px; /* Horizontal scrollbar height */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2e3944;
+  background-color: #A8A8A8; /* Scrollbar color */
+  border-radius: 4px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+  background-color: #A8A8A8; /* Scrollbar color on hover */
 }
 
-.scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #2e3944 #f3f4f5;
-} */
+::-webkit-scrollbar-track {
+  background-color: #E1E4E7; /* Track color */
+  border-radius: 4px;
+}
 
 /* scrollbar */
 
