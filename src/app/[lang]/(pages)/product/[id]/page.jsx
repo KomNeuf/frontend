@@ -107,7 +107,7 @@ const DetailPage = () => {
             >
               {product?.photos?.[0] && (
                 <Image
-                  src={product.photos[0]}
+                  src={product?.photos[0]}
                   alt={`Main Product Image`}
                   width={300}
                   height={300}
@@ -199,6 +199,12 @@ const DetailPage = () => {
                   },
                   { label: t?.location, value: product?.userId?.country },
                   { label: t?.paymentOptions, value: t?.cash },
+                  {
+                    label: t?.quantity,
+                    value:
+                      product?.quantity > 0 ? product?.quantity : t?.outStock,
+                  },
+
                   { label: t?.views, value: product?.viewCount },
                   { label: t?.uploaded, value: formatDate(product?.createdAt) },
                 ].map((item, index) => (
@@ -224,9 +230,11 @@ const DetailPage = () => {
               )}
 
               <h2 className="text-xl text-primaryText font-semibold mb-2">
-                {product.title}
+                {product?.title}
               </h2>
-              <p className="break-words mb-4 text-secondaryText">{product.description}</p>
+              <p className="break-words mb-4 text-secondaryText">
+                {product?.description}
+              </p>
               {product?.userId?._id === loginUser?._id ? (
                 <button className="w-full bg-primaryText text-white py-2 rounded-md ">
                   {t?.yourProductMessage}
@@ -267,7 +275,12 @@ const DetailPage = () => {
                 </div>
                 <ChevronRight
                   onClick={() =>
-                    router.push(`/${lang}/profile/${product?.userId?._id}`)
+                    router.push(
+                      `/${lang}/profile/${product?.userId?.name.replace(
+                        / /g,
+                        "-"
+                      )}`
+                    )
                   }
                   className="text-gray-400 cursor-pointer hover:text-primaryText"
                 />

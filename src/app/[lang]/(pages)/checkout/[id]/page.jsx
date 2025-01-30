@@ -24,6 +24,7 @@ const CheckoutPage = () => {
   const id = pathname.split("/")[3];
 
   const [shippingCost, setShippingCost] = useState(45);
+  const [quantity, setQuantity] = useState(1);
   const router = useRouter();
   const [paymentMethod, setPaymentMethod] = useState("Cash on Delivery");
   const loginUser = useSelector((state) => state.auth.loginUser);
@@ -42,7 +43,7 @@ const CheckoutPage = () => {
 
   useEffect(() => {
     if (product) {
-      if (product?.shippingOffer && product?.price > 100) {
+      if (product?.shippingOffer && product?.price * quantity > 100) {
         setShippingCost(0);
       } else {
         if (loginUser?.shipping) {
@@ -52,7 +53,7 @@ const CheckoutPage = () => {
         }
       }
     }
-  }, [product, loginUser]);
+  }, [product, quantity, loginUser]);
 
   const fetchShippingCost = async () => {
     try {
@@ -93,9 +94,24 @@ const CheckoutPage = () => {
     }
   };
 
+  // const totalPrice = product
+  //   ? (parseFloat(product.price) + shippingCost).toFixed(2)
+  //   : 0;
+
   const totalPrice = product
-    ? (parseFloat(product.price) + shippingCost).toFixed(2)
+    ? (parseFloat(product.price) * quantity + shippingCost).toFixed(2)
     : 0;
+
+  const handleIncrease = () => {
+    if (quantity < product.quantity) {
+      setQuantity(quantity + 1);
+    }
+  };
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   const handleAddressChange = () => {
     router.push(`/${lang}/settings?tab=shipping`);
@@ -160,6 +176,7 @@ const CheckoutPage = () => {
       shippingAddress: loginUser?.shipping,
       paymentMethod: "Cash on Delivery",
       totalPrice,
+      quantity,
     };
 
     try {
@@ -194,8 +211,23 @@ const CheckoutPage = () => {
                 </p>
               </div>
               <div className="ml-auto text-lg">
+              <div className="flex items-center">
+                  <button
+                    onClick={handleDecrease}
+                    className="px-2 py-1 min-w-8 border border-gray-300 rounded"
+                  >
+                    -
+                  </button>
+                  <span className="mx-2">{quantity}</span>
+                  <button
+                    onClick={handleIncrease}
+                    className="px-2 py-1 border min-w-8 border-gray-300 rounded"
+                  >
+                    +
+                  </button>
+                </div>
                 <span className="mt-3 -ml-1">
-                  {product.price?.toFixed(2)} DH
+                {(product.price * quantity)?.toFixed(2)} DH
                 </span>
               </div>
             </div>

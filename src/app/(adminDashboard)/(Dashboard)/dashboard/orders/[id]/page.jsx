@@ -119,7 +119,12 @@ const OrderDetail = () => {
                     {order?.senditDelivery?.status}
                   </span>
                 </p>
-
+                <p>
+                  Total Quantity:{" "}
+                  <span className=" text-md font-bold text-gray-800">
+                    {order?.quantity || 0}
+                  </span>
+                </p>
                 <p>
                   Total Price:{" "}
                   <span className="text-md font-bold text-gray-800">

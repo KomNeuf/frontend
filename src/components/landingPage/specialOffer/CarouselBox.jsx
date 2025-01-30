@@ -56,7 +56,7 @@ const CarouselBox = ({ title, className, children, href, full, lang }) => {
   const goToPrevSlide = () => {
     carouselBoxRef.current.slickPrev();
   };
-  console.log("children", children);
+
   return (
     <div
       className={`w-[100%] mx-auto my-8 flex rounded-md ${

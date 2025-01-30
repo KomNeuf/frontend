@@ -14,7 +14,14 @@ const LanguageDropdown = () => {
     { name: "Arabic", code: "ar" },
   ];
   const dropdownRef = useRef(null);
+
   useEffect(() => {
+    if (window.location.hostname === "KomNeuf.com") {
+      const newUrl = `https://KomNeuf.ma${window.location.pathname}`;
+      window.location.replace(newUrl);
+      return;
+    }
+
     const pathLanguage = pathname.split("/")[1];
     const matchedLanguage = languages.find(
       (lang) => lang.code === pathLanguage
@@ -26,6 +33,7 @@ const LanguageDropdown = () => {
       setSelectedLanguage("EN");
     }
   }, [pathname]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {

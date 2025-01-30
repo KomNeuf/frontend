@@ -32,6 +32,7 @@ const SellPage = () => {
     condition: "",
     color: [],
     materials: "",
+    quantity: 1,
     price: "",
     bankName: "",
     rib: "",
@@ -139,6 +140,10 @@ const SellPage = () => {
     if (!formData.size) {
       newErrors.size = t?.sizeRequired;
     }
+
+    if (!formData.quantity) {
+      newErrors.quantity = t?.quantityRequired;
+    }
     // if (!formData.shippingCost) {
     //   newErrors.shippingCost = t?.shippingCostRequired;
     // }
@@ -195,7 +200,7 @@ const SellPage = () => {
             price: "",
             bankName: "",
             rib: "",
-
+            quantity: 1,
             shippingOffer: false,
           });
           // router.push(`/${lang}/product/${response?.data?.data?._id}`);
@@ -460,7 +465,7 @@ const SellPage = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
           <div className="">
             <label
               htmlFor="materials"
@@ -478,6 +483,25 @@ const SellPage = () => {
           </div>
           <div className="">
             <label
+              htmlFor="quantity"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              {t?.quantityLabel}
+            </label>
+            <input
+              type="number"
+              id="quantity"
+              value={formData.quantity}
+              min="0"
+              onChange={handleInputChange}
+              className="w-full p-2 border rounded"
+            />
+            {errors.quantity && (
+              <p className="text-red-500 text-xs">{errors.quantity}</p>
+            )}
+          </div>
+          <div className="">
+            <label
               htmlFor="price"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
@@ -485,7 +509,7 @@ const SellPage = () => {
             </label>
             <div className="relative">
               <span className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
-              DH
+                DH
               </span>
               <input
                 type="number"
@@ -501,7 +525,10 @@ const SellPage = () => {
               <p className="text-red-500 text-xs">{errors.price}</p>
             )}
           </div>
+
+         
         </div>
+
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
             <label
@@ -521,7 +548,6 @@ const SellPage = () => {
               <p className="text-red-500 text-xs">{errors.bankName}</p>
             )}
           </div>
-
           <div>
             <label
               htmlFor="rib"
@@ -540,26 +566,6 @@ const SellPage = () => {
             {errors.rib && <p className="text-red-500 text-xs">{errors.rib}</p>}
           </div>
         </div>
-
-        {/* <div className="">
-            <label
-              htmlFor="shippingCost"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              {t?.shippingCostLabel}
-            </label>
-
-            <div
-              className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4"
-              role="alert"
-            >
-              <p className="font-bold">Limited Time Offer!</p>
-              <p>
-                For a limited time only, we&apos;re offering FREE SHIPPING on
-                orders over 100 DH!
-              </p>
-            </div>
-          </div> */}
 
         <div className="flex  justify-between flex-wrap">
           <div>

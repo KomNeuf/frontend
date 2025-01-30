@@ -477,6 +477,8 @@
     },
     "profile": {
         "editProfile": "تحرير الملف الشخصي",
+        "copyProfile": "انسخ رابط الملف الشخصي",
+        "profileCopied":"تم نسخ رابط الملف الشخصي",
         "message": "رسالة",
         "follow": "يتبع",
         "following": "التالي",

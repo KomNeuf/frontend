@@ -18,14 +18,15 @@ const ProfilePage = () => {
   const router = useRouter();
   const lang = pathname?.split("/")[1];
   const t = langs[lang]?.profile;
-  const id = pathname.split("/")[3];
+  const username = pathname.split("/")[3];
   const loginUser = useSelector((state) => state.auth?.loginUser);
+
   const {
     data: user,
     isLoading,
     error,
-  } = api.adminApis.useGetSingleUserQuery(id, {
-    skip: !id,
+  } = api.adminApis.useGetSingleUserByNameQuery(username, {
+    skip: !username,
   });
   const [toggleFollowUser, { isLoading: isToggling }] =
     api.adminApis.useToggleFollowUserMutation();
@@ -42,7 +43,7 @@ const ProfilePage = () => {
     if (loginUser) {
       try {
         const res = await toggleFollowUser({
-          targetUserId: id,
+          targetUserId: user?._id,
           loggedInUserId: loginUser?._id,
         });
         if (res?.data?.success) {
@@ -55,6 +56,22 @@ const ProfilePage = () => {
     } else {
       toast.error(t?.loginToFollow);
     }
+  };
+
+  const handleCopyProfile = () => {
+    const profileUrl = `${
+      window.location.origin
+    }/${lang}/profile/${user?.name.replace(/ /g, "-")}`;
+
+    navigator.clipboard
+      .writeText(profileUrl)
+      .then(() => {
+        toast.success(t?.profileCopied);
+      })
+      .catch((error) => {
+        console.error("Failed to copy text: ", error);
+        toast.error(t?.copyFailed || "Failed to copy profile link!");
+      });
   };
 
   if (isLoading) return <Loading />;
@@ -96,13 +113,13 @@ const ProfilePage = () => {
                     <span>
                       <Link
                         className="hover:underline"
-                        href={`/${lang}/profile/${id}/followers`}
+                        href={`/${lang}/profile/${user?._id}/followers`}
                       >
                         {user?.followers?.length || 0} {t?.followers},
                       </Link>
                       <Link
                         className="hover:underline"
-                        href={`/${lang}/profile/${id}/following`}
+                        href={`/${lang}/profile/${user?._id}/following`}
                       >
                         {" "}
                         {user?.following?.length || 0} {t?.followingCount}
@@ -118,7 +135,13 @@ const ProfilePage = () => {
             </div>
           </div>
           <div className="mt-4 md:mt-0 space-x-2 flex ">
-            {loginUser?._id === id ? (
+            <button
+              onClick={handleCopyProfile}
+              className="px-4 text-nowrap py-2 text-sm font-medium hover:text-white text-primaryText border border-primaryText rounded-md hover:bg-primaryText/80"
+            >
+              {t?.copyProfile}
+            </button>
+            {loginUser?._id === user?._id ? (
               <button
                 onClick={() => {
                   loginUser
@@ -134,7 +157,7 @@ const ProfilePage = () => {
                 <button
                   onClick={() => {
                     loginUser
-                      ? router.push(`/${lang}/chat?userId=${id}`)
+                      ? router.push(`/${lang}/chat?userId=${user?._id}`)
                       : router.push(`/${lang}/login`);
                   }}
                   className="px-4 py-2 hover:text-white text-sm font-medium text-primaryText border border-primaryText rounded-md hover:bg-primaryText/80"
@@ -152,7 +175,7 @@ const ProfilePage = () => {
           </div>
         </div>
 
-        <ProfileTabs userID={id} lang={lang} loginUser={loginUser}/>
+        <ProfileTabs userID={user?._id} lang={lang} loginUser={loginUser} />
       </div>
     </div>
   );

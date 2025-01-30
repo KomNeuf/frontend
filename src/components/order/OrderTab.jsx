@@ -196,6 +196,9 @@ const OrderTab = ({ type, orders, refetch }) => {
                 </p>
 
                 <div>
+                  <p className=" font-medium text-gray-800 ">
+                    {t?.totalQuantity}: {order?.quantity || 0}
+                  </p>
                   <p className=" font-medium text-gray-800">
                     {t?.totalPrice}: {order?.totalPrice} DH
                   </p>

@@ -157,7 +157,9 @@ const ProductCard = ({ product, type, refetch, lang }) => {
           <div
             className="flex justify-center"
             onClick={() =>
-              router.push(`/${lang}/profile/${product?.userId?._id}`)
+              router.push(
+                `/${lang}/profile/${product?.userId?.name.replace(/ /g, "-")}`
+              )
             }
           >
             <Image

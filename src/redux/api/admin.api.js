@@ -74,6 +74,10 @@ const api = createApi({
       query: (userId) => `user/getUser/${userId}`,
       transformResponse: (response) => response?.data,
     }),
+    getSingleUserByName: builder.query({
+      query: (username) => `user/userByName/${username}`,
+      transformResponse: (response) => response?.data,
+    }),
     changePassword: builder.mutation({
       query: ({ userId, currentPassword, newPassword }) => ({
         url: `user/update-password/${userId}`,

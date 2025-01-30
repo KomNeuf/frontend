@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 export default function RootLayout({ children, params }) {
   const { lang } = params;
+
   return (
-    <main >
+    <main>
       <Navbar lang={lang} />
       <div className="min-h-[100vh]">{children}</div>
       <WhatsAppButton />

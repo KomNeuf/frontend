@@ -43,7 +43,7 @@ const Sidebar = ({
           {loginUser ? (
             <>
               <Link
-                href={`/${lang}/profile/${loginUser?._id}`}
+                href={`/${lang}/profile/${loginUser?.name.replace(/ /g, "-")}`}
                 className="block px-3 py-2 text-base font-medium text-primaryText rounded-lg  hover:bg-primaryGray"
                 onClick={toggleSidebar}
               >

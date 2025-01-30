@@ -44,7 +44,7 @@ const ProfileMenu = ({ onLogout, loginUser }) => {
         >
           <Link
             onClick={() => setIsOpen(false)}
-            href={`/${lang}/profile/${loginUser?._id}`}
+            href={`/${lang}/profile/${loginUser?.name.replace(/ /g, "-")}`}
             role="menuitem"
             className="flex w-full cursor-pointer select-none items-center gap-2 rounded-md px-3 pt-[9px] pb-2 text-start leading-tight outline-none transition-all hover:bg-primaryBg "
           >

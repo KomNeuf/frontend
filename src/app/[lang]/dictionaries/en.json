@@ -477,6 +477,8 @@
   },
   "profile": {
     "editProfile": "Edit Profile",
+    "copyProfile": "Copy Profile Link",
+    "profileCopied":"Profile link copied",
     "message": "Message",
     "follow": "Follow",
     "following": "Following",

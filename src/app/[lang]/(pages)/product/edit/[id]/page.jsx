@@ -40,6 +40,7 @@ const EditProduct = () => {
     condition: "",
     color: [],
     materials: "",
+    quantity: 1,
     price: "",
     shippingOffer: false,
   });
@@ -68,6 +69,7 @@ const EditProduct = () => {
         materials: productData.materials,
         price: productData.price,
         shippingOffer: productData.shippingOffer,
+        quantity: productData.quantity,
       });
 
       const selectedCategory = NavCategoriesWithSizes.find(
@@ -450,25 +452,43 @@ const EditProduct = () => {
               className="w-full p-2 border rounded"
             />
           </div>
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="price"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            {t?.price}
-          </label>
-          <input
-            type="number"
-            id="price"
-            value={formData.price}
-            onChange={handleInputChange}
-            className="w-full p-2 border rounded"
-            placeholder={t?.pricePlaceholder}
-          />
-          {errors.price && (
-            <p className="text-red-500 text-xs">{errors.price}</p>
-          )}
+
+          <div>
+            <label
+              htmlFor="quantity"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              {t?.quantityLabel}
+            </label>
+            <input
+              type="number"
+              id="quantity"
+              value={formData.quantity}
+              min="0"
+              onChange={handleInputChange}
+              className="w-full p-2 border rounded"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="price"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              {t?.price}
+            </label>
+            <input
+              type="number"
+              id="price"
+              value={formData.price}
+              onChange={handleInputChange}
+              className="w-full p-2 border rounded"
+              placeholder={t?.pricePlaceholder}
+            />
+            {errors.price && (
+              <p className="text-red-500 text-xs">{errors.price}</p>
+            )}
+          </div>
         </div>
         <div className="flex  justify-between flex-wrap">
           <div>

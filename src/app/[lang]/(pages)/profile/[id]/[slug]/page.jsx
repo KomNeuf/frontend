@@ -47,7 +47,9 @@ const FollowDetailPage = () => {
             </div>
           </div>
           <ChevronRight
-            onClick={() => router.push(`/${lang}/profile/${user?._id}`)}
+            onClick={() =>
+              router.push(`/${lang}/profile/${user?.name.replace(/ /g, "-")}`)
+            }
             className="text-gray-400  cursor-pointer hover:text-primaryText"
           />
         </div>

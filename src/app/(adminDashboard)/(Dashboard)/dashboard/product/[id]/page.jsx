@@ -107,6 +107,10 @@ const ProductDetail = () => {
           {product?.rib}
         </p>
         <p className="text-lg text-gray-600">
+          <span className="font-medium text-gray-700">Quantity:</span>
+          {product?.quantity || 0}
+        </p>
+        <p className="text-lg text-gray-600">
           <span className="font-medium text-gray-700">Price:</span>
           {product?.price} DH
         </p>

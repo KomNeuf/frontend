@@ -1,12 +1,12 @@
 "use client";
-import ProductCard from "@/components/landingPage/ProductCard";
-import Loading from "@/components/Loading";
-import FilterBar from "@/components/navbar/FilterBar";
-import NoData from "@/components/NoData";
 import api from "@/redux/api";
-import { useSearchParams } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import NoData from "@/components/NoData";
+import Loading from "@/components/Loading";
 import langs from "../../dictionaries/langs";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import FilterBar from "@/components/navbar/FilterBar";
+import ProductCard from "@/components/landingPage/ProductCard";
 
 const SearchResult = ({ params }) => {
   const { lang } = params;
@@ -43,7 +43,10 @@ const SearchResult = ({ params }) => {
     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
       <h1 className="text-3xl font-bold text-primaryText mb-6">
         {t?.searchResult} &quot;
-        {searchQuery || langs[lang]?.categoriesNav[specificItem]}&quot;
+        {searchQuery ||
+          langs[lang]?.categoriesNav[seeAll] ||
+          langs[lang]?.categoriesNav[specificItem]}
+        &quot;
       </h1>
       <div className="border-t border-b py-5">
         <FilterBar
