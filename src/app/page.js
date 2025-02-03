@@ -6,9 +6,7 @@ export default function Page() {
   const router = useRouter();
   const pathname = usePathname();
 
-  console.log("window.location.hostname",window.location.hostname)
   useEffect(() => {
-
     const validLocales = ["en", "fr", "ar"];
     const pathLocale = pathname.split("/")[1];
 
